@@ -1,6 +1,8 @@
-<form (ngSubmit)="save()" [formGroup]="loginForm">
+<form (ngSubmit)="register()" [formGroup]="registerForm">
   <div class="container loginDiv">
     <i class="fa fa-user-circle fa-5x"></i>
+    <label for="email">Email</label>
+    <input class="form-control" #email type="text" placeholder="Email" [formControlName]="'email'">
     <label for="username">Username or Email</label>
     <input class="form-control" #username type="text" placeholder="Username or Email" [formControlName]="'username'">
     <label for="password">Password</label>
