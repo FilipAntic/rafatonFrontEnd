@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+<form (ngSubmit)="save()" [formGroup]="loginForm">
+  <div class="container loginDiv">
+    <label for="username">Username or Email</label>
+    <input class="form-control" #username type="text" placeholder="Username or Email" [formControlName]="'username'">
+    <label for="password">Password</label>
+    <input class="form-control" #password type="password" placeholder="Password" [formControlName]="'password'">
+    <button class="btn btn-success">Sign in</button>
+  </div>
+</form>
