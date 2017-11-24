@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { CheckboxModule, DataTableModule, SharedModule, ButtonModule } from 'primeng/primeng';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     CheckboxModule,
     DataTableModule,
     SharedModule,
-    ButtonModule
+    ButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
