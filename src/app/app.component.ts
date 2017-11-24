@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
         this.events = <Proba[]>this.data._embedded.events;
         console.log(this.data.json);
       });*/
-    this.http.get('https://localhost:8087/user/findAll').
+    this.http.get('http://localhost:8087/user/findAll').
       subscribe((response: Response) => {
         // Read the result field from the JSON response.
         // this.results = data['results'];
