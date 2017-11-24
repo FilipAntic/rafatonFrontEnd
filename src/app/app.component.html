@@ -1,8 +1,10 @@
 <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
 <button class="btn btn-primary">Moj prvi klik</button>
-<p-dataTable #dt [value]="events" [paginator]="true" [rows]="10" [sortOrder]="1">
-    <p-column field="name" header="Name" sortable="true"></p-column>
-    <p-column field="locale" header="Locale" sortable="true"></p-column>
-    <p-column field="eventUrl" header="EventUrl" sortable="true"></p-column>
+<p-dataTable #dt [value]="data" [paginator]="true" [rows]="10" [sortOrder]="1">
+    <p-column field="id" header="id" sortable="true"></p-column>
+    <p-column field="username" header="username" sortable="true"></p-column>
+    <p-column field="email" header="email" sortable="true"></p-column>
+    <p-column field="password" header="Password" sortable="true"></p-column>
+    <p-column field="create_time" header="Date_Created" sortable="true"></p-column>
 </p-dataTable>
 <button type="button" pButton (click)="update(dt)" label="Reset"></button>
