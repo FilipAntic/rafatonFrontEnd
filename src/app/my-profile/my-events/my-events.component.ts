@@ -23,7 +23,8 @@ export class MyEventsComponent implements OnInit {
 
   }
 
-  selectCar(event: Event) {
+  selectEvent(event: Event) {
+    console.log('proba')
     this.selectedEvent = event;
     this.displayDialog = true;
   }
