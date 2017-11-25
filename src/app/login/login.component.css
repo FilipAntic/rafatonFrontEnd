@@ -5,15 +5,22 @@ input[type=text], input[type=password], button {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+
 }
 
 .loginDiv {
     width: 300px;
-    border: 1px solid gray; 
+    height: 350px;
+    border: 1px solid gray;
     border-radius: 2%;
+    position: absolute;
+    top: 490px;
+    left: 1020px;
+    background:#7f7f7f;
+    background:rgba(255,255,255,0.8);
 }
 
-i { 
+i {
     text-align: center;
     width: 100%;
     padding: 12px 20px;
