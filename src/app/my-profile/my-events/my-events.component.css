@@ -9,8 +9,10 @@
   cursor: hand;
 }
 .bckLogo{
+  width: 70%;
   position: absolute;
-  top: 325px;
+  top: 398px !important;
+  left: 350px;
   margin: 0 auto;
   opacity: 1;
   animation: bounce 2s;

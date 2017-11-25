@@ -1,6 +1,6 @@
 .selected {
     text-align: center;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 button {
@@ -13,11 +13,18 @@ img {
 }
 
 textarea {
-  
+
     height: 100px;
 }
 
 .container {
     height: 500px;
     width: 500px;
+}
+.selected,container{
+  width: 300px;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+  overflow-x: hidden !important;
 }

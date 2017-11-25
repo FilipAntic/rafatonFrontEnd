@@ -2,4 +2,6 @@
 .background {
     background-image: url('assets/images/bckAll.jpg');
     background-size: 1920px 2890px;
+  background-size: cover;
+    background-repeat: no-repeat;
 }

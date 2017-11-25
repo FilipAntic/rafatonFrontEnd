@@ -1,4 +1,4 @@
-<p-dialog header="Title" [(visible)]="displayDialog" [width]="500" appendTo="body">
+<p-dialog class="dialog" header="Title" [(visible)]="displayDialog" [width]="500" appendTo="body">
   <div *ngIf="selectedEvent" class="selected container">
     <p>{{selectedEvent.name}}</p>
     <img [src]="selectedEvent.images[0].url" alt="">
@@ -9,6 +9,4 @@
     <br>
     <button (click)="onSave()" class="btn btn-success">Save</button>
   </div>
-
-
 </p-dialog>
