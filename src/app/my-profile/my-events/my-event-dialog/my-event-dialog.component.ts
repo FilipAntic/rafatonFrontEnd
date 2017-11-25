@@ -11,9 +11,12 @@ export class MyEventDialogComponent implements OnInit {
 
   @Input() displayDialog: boolean = false;
   @Input() selectedEvent: Event;
+  images: any[];
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    this.images = [];
+    this.images.push({ source: 'assets/images/events.jpg', alt: 'Description for Image 1' });
   }
 
   onSave() {

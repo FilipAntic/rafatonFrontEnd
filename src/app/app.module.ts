@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
-import { CheckboxModule, DataTableModule, SharedModule, ButtonModule, DataListModule, DataScrollerModule, DialogModule } from 'primeng/primeng';
+import { CheckboxModule, DataTableModule, SharedModule, ButtonModule, DataListModule, DataScrollerModule, DialogModule, CarouselModule, GalleriaModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -41,7 +41,8 @@ import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/m
     DataListModule,
     DataScrollerModule,
     DialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GalleriaModule
 
   ],
   providers: [

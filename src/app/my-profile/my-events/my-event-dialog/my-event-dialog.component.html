@@ -1,4 +1,4 @@
-<p-dialog class="dialog" header="Title" [(visible)]="displayDialog" [width]="500" appendTo="body">
+<p-dialog class="dialog" header="Title" [(visible)]="displayDialog" [width]="700" appendTo="body">
   <div *ngIf="selectedEvent" class="selected container">
     <p>{{selectedEvent.name}}</p>
     <img [src]="selectedEvent.images[0].url" alt="">
@@ -7,6 +7,10 @@
     <textarea type="text" placeholder="Write your notes"></textarea>
     <br>
     <br>
+
     <button (click)="onSave()" class="btn btn-success">Save</button>
   </div>
+  <p-galleria [images]="images" panelWidth="500" panelHeight="300" [showCaption]="false" class="center"></p-galleria>
+  <br>
+  <br>
 </p-dialog>
