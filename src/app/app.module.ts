@@ -10,13 +10,17 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { MenubarModule } from 'primeng/primeng';
+import { RoutingModule } from './routing/routing.module';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { MenubarModule } from 'primeng/primeng';
     SharedModule,
     ButtonModule,
     ReactiveFormsModule,
-    MenubarModule
+    MenubarModule,
+    RoutingModule
 
   ],
   providers: [],
