@@ -20,4 +20,7 @@ export class MyEventDialogComponent implements OnInit {
     this.eventService.setEvents(this.selectedEvent)
   }
 
+  onDialogHide() {
+    this.selectedEvent = null;
+  }
 }

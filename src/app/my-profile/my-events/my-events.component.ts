@@ -31,8 +31,6 @@ export class MyEventsComponent implements OnInit {
     console.log(this.displayDialog)
   }
 
-  onDialogHide() {
-    this.selectedEvent = null;
-  }
+
 
 }
