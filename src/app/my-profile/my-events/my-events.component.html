@@ -2,7 +2,7 @@
   <p-header>List of Events</p-header>
   <p-footer>Choose from the list.</p-footer>
   <ng-template let-event pTemplate="item">
-    <div class="ui-grid ui-grid-responsive ui-fluid" >
+    <div class="ui-grid ui-grid-responsive ui-fluid">
       <div class="ui-grid-row">
         <div class="ui-grid-col-3" style="text-align:center">
           <i class="fa fa-search" (click)="selectEvent(event)" style="cursor:pointer;float:left;margin-top:40px"></i>
@@ -16,10 +16,9 @@
             </div>
           </div>
         </div>
-      </div>          <hr>
+      </div>
+      <hr>
     </div>
   </ng-template>
-  <p-dialog header="Title" [(visible)]="displayDialog" [height]="300" appendTo="body">
-    Content
-  </p-dialog>
+  <app-my-event-dialog [displayDialog]="displayDialog"></app-my-event-dialog>
 </p-dataScroller>

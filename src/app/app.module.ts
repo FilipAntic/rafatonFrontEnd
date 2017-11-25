@@ -13,7 +13,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { AuthService } from './services/auth.service';
 import { MyEventsComponent } from './my-profile/my-events/my-events.component';
 import { EventService } from './my-profile/my-events/event.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/my-event-dialog.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     SignupComponent,
     HeaderComponent,
     MyProfileComponent,
-    MyEventsComponent
+    MyEventsComponent,
+    MyEventDialogComponent
   ],
   imports: [
     BrowserModule,
