@@ -1,7 +1,9 @@
-<p-dialog header="Title" [(visible)]="displayDialog" [height]="300" appendTo="body">
-  <div *ngIf="selectedEvent" class="selected">
+<p-dialog header="Title" [(visible)]="displayDialog" [height]="500" [width]="500" appendTo="body">
+  <div *ngIf="selectedEvent" class="selected container">
     <p>{{selectedEvent.name}}</p>
-    <input type="text" placeholder="Write your notes">
+    <img [src]="selectedEvent.images[0].url" alt="">
+    <textarea type="text" placeholder="Write your notes"></textarea>
+
   </div>
 
   <button (click)="onSave()">Save</button>

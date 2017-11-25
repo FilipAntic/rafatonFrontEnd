@@ -19,7 +19,7 @@ export class EventService {
         let data = response.json()
         this.events = <Event[]>data._embedded.events;
         localStorage.setItem('events', JSON.stringify(this.events))
-        console.log(localStorage.getItem('events'))
+        console.log(JSON.stringify(JSON.parse(localStorage.getItem('events'))[0]))
       });
   }
 
