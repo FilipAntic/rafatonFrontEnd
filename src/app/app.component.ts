@@ -18,6 +18,5 @@ declare const gapi: any;
 export class AppComponent implements OnInit {
   constructor() { }
   ngOnInit() {
-
   }
 }
