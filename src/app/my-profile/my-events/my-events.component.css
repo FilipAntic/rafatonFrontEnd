@@ -42,3 +42,8 @@
   font-weight: 500;
   font-style: normal;
 }
+
+.bckLogo {
+  position: absolute;
+  top: 325px;
+}
