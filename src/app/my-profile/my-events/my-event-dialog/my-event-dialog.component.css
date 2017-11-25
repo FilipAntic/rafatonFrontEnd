@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+button {
+    width: 60%;
+}
+
 img {
     width: 150px;
     height: 100px;
