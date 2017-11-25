@@ -8,3 +8,37 @@
   margin: 0 auto;
   cursor: hand;
 }
+.logo{
+  position: absolute;
+  top: 325px;
+  margin: 0 auto;
+  opacity: 1;
+  animation: bounce 2s;
+}
+
+@keyframes bounce {
+  0%{
+      transform: scale(0.5);
+  }
+  50%{
+    transform: scale(1.2);
+    /*transform: rotate(180deg);*/
+  }
+  100%{
+    transform: scale(1);
+
+  }
+}
+.logo_text{
+  font-size: 50px;
+}
+
+@font-face {
+  font-family: 'Ness';
+  src: url('/src/assets/fonts/Ness.eot');
+  src: url('/src/assets/fonts/Ness.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Ness.woff') format('woff'),
+  url('/src/assets/fonts/Ness.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
