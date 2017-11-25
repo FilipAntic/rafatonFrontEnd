@@ -1,10 +1,10 @@
-<form (ngSubmit)="save()" [formGroup]="loginForm">
+<form (ngSubmit)="login()" [formGroup]="loginForm">
   <div class="container loginDiv">
     <i class="fa fa-user-circle fa-5x"></i>
     <label for="username">Username or Email</label>
     <input class="form-control" #username type="text" placeholder="Username or Email" [formControlName]="'username'">
     <label for="password">Password</label>
     <input class="form-control" #password type="password" placeholder="Password" [formControlName]="'password'">
-    <button class="btn btn-success">Sign in</button>
+    <button type="button" class="btn btn-success" (click)="login()">Sign in</button>
   </div>
 </form>

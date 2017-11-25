@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Http } from '@angular/http'
 import { Response } from '@angular/http/src/static_response';
 import { Proba } from './proba';
 import { DataTable } from 'primeng/primeng';
+import { AuthService } from './services/auth.service';
+import { Event } from './my-profile/my-events/event';
+
 
 declare const gapi: any;
 
@@ -19,16 +22,19 @@ export class AppComponent implements OnInit {
   events: any;
   selectedValues: string[] = [];
   eventsURL: string = "https://app.ticketmaster.com/discovery/v1/events.json?apikey=J0j6po0B7Ncodizwp1STKHPGMgLriirG";
-  eventsURLSecond: string = "https://app.ticketmaster.com//discovery/v1/events.json?apikey=J0j6po0B7Ncodizwp1STKHPGMgLriirG&page=1&size=20{&sort}";
-  constructor(private http: Http) { }
+  eventsURLSecond: string = "https://app.ticketmaster.com/discovery/v2/events/id=29005185F18D46FA/images.json?apikey=J0j6po0B7Ncodizwp1STKHPGMgLriirG";
+  constructor(private http: Http, private auth: AuthService) {
+
+  }
   ngOnInit() {
-    this.http.get(this.eventsURL).
+    this.http.get(this.eventsURLSecond).
       subscribe((response: Response) => {
         // Read the result field from the JSON response.
         // this.results = data['results'];
         //this.data = response.json();
         //this.events = <Proba[]>this.data._embedded.events;
-        console.log(response.json());
+
+        console.log(response);
       });
     this.http.get('http://localhost:8087/user/findAll').
       subscribe((response: Response) => {
@@ -39,6 +45,8 @@ export class AppComponent implements OnInit {
         console.log(this.data);
       });
   }
+
+
   onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.

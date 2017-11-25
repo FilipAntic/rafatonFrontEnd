@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/primeng';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   items: MenuItem[];
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
 
@@ -32,6 +33,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout() {
+    this.auth.logout();
     this.router.navigate(['/login']);
   }
 }

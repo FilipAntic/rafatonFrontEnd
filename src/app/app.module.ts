@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
-import { CheckboxModule, DataTableModule, SharedModule, ButtonModule } from 'primeng/primeng';
+import { CheckboxModule, DataTableModule, SharedModule, ButtonModule, DataListModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -12,6 +10,10 @@ import { HeaderComponent } from './header/header.component';
 import { MenubarModule } from 'primeng/primeng';
 import { RoutingModule } from './routing/routing.module';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { AuthService } from './services/auth.service';
+import { MyEventsComponent } from './my-profile/my-events/my-events.component';
+import { EventService } from './my-profile/my-events/event.service';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    MyEventsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +35,14 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     ButtonModule,
     ReactiveFormsModule,
     MenubarModule,
-    RoutingModule
+    RoutingModule,
+    DataListModule
 
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    EventService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

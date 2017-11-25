@@ -1,5 +1,5 @@
 <p-menubar [model]="items">
-  <button pButton label="Logout" icon="fa-sign-out" (click)="onLogout()"></button>
-  <button pButton label="Login" icon="fa-sign-in" (click)="onLogin()"></button>
-  <button pButton label="Register" icon="fa-user-plus" (click)="onRegister()"></button>
+  <button *ngIf="auth.isAuthenticated" pButton label="Logout" icon="fa-sign-out" (click)="onLogout()"></button>
+  <button *ngIf="!auth.isAuthenticated" pButton label="Login" icon="fa-sign-in" (click)="onLogin()"></button>
+  <button *ngIf="!auth.isAuthenticated" pButton label="Register" icon="fa-user-plus" (click)="onRegister()"></button>
 </p-menubar>
