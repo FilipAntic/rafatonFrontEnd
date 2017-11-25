@@ -4,6 +4,15 @@ export interface Event {
     locale: string,
     eventUrl: string
     promoterId: number[],
+    images: [
+        {
+            ratio: string,
+            url: string,
+            width: number,
+            height: number,
+            fallback: string
+        }
+    ]
     dates: {
         start: {
             dateTime: Date,
