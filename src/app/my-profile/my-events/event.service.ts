@@ -14,6 +14,7 @@ export class EventService {
         // this.results = data['results'];
         //this.data = response.json();
         //this.events = <Proba[]>this.data._embedded.events;
+        //proba
         let data = response.json()
         this.events = <Event[]>data._embedded.events;
         localStorage.setItem('events', JSON.stringify(this.events))
