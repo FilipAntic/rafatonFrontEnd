@@ -2,6 +2,7 @@ import { Injectable, Output } from '@angular/core';
 import { Http } from '@angular/http';
 import { Event } from './event';
 import { Response } from '@angular/http';
+import { User } from '../../login/user';
 @Injectable()
 export class EventService {
 
@@ -19,7 +20,16 @@ export class EventService {
         this.events = <Event[]>data._embedded.events;
         localStorage.setItem('events', JSON.stringify(this.events))
       });
+  }
 
+  setEvents(data: any) {
+    let user: User = <User>JSON.parse(localStorage.getItem('user'));
+    let object = {
+      userId: user.id,
+      event: <Event>data
+    };
+    console.log(object)
+    return this.http.post("http://localhost:8087/event/saveEvent", object);
   }
 
 }

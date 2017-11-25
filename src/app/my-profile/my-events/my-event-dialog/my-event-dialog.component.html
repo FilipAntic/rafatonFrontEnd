@@ -1,3 +1,8 @@
 <p-dialog header="Title" [(visible)]="displayDialog" [height]="300" appendTo="body">
-  Content
+  <div *ngIf="selectedEvent" class="selected">
+    <p>{{selectedEvent.name}}</p>
+    <input type="text" placeholder="Write your notes">
+  </div>
+
+  <button (click)="onSave()">Save</button>
 </p-dialog>
