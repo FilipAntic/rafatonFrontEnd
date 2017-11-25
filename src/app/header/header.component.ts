@@ -20,6 +20,11 @@ export class HeaderComponent implements OnInit {
         label: 'My profile',
         icon: 'fa-user-circle',
         url: '/myProfile'
+      },
+      {
+        label: 'Buy ticket',
+        icon: 'fa-calendar',
+        url: '/myProfile'
       }
     ];
   }

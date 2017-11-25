@@ -10,6 +10,8 @@ import { Event } from './event';
 export class MyEventsComponent implements OnInit {
 
   events: Event[];
+  displayDialog: boolean;
+  selectedEvent: Event;
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
@@ -17,8 +19,17 @@ export class MyEventsComponent implements OnInit {
       this.eventService.getEvents();
       this.events = JSON.parse(localStorage.getItem('events'));
       console.log(this.events);
-    }, 1000)
+    }, 0)
 
+  }
+
+  selectCar(event: Event) {
+    this.selectedEvent = event;
+    this.displayDialog = true;
+  }
+
+  onDialogHide() {
+    this.selectedEvent = null;
   }
 
 }
