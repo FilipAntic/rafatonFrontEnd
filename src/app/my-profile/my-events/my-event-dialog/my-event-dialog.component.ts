@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Event } from '@angular/router/src/events';
 import { EventService } from '../event.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-my-event-dialog',
@@ -11,8 +12,12 @@ export class MyEventDialogComponent implements OnInit {
 
   @Input() displayDialog: boolean = false;
   @Input() selectedEvent: Event;
+  @Output() onDialogClosed: EventEmitter<any> = new EventEmitter<any>();
   images: any[];
-  constructor(private eventService: EventService) { }
+  title: string = "Title"
+  hashTags: string[];
+  friendTags: string[];
+  constructor(private eventService: EventService, private auth: AuthService) { }
 
   ngOnInit() {
     this.images = [];
@@ -20,10 +25,12 @@ export class MyEventDialogComponent implements OnInit {
   }
 
   onSave() {
-    this.eventService.setEvents(this.selectedEvent)
+    this.auth.setEvents(this.selectedEvent);
   }
 
-  onDialogHide() {
+  onHide() {
+    console.log("proba")
     this.selectedEvent = null;
+    this.onDialogClosed.emit()
   }
 }

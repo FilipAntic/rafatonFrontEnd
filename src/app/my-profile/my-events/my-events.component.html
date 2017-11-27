@@ -1,5 +1,3 @@
-<img class="bckLogo" src="assets/images/logoPNG.png" alt="">
-<p class="logo_text"> We help people create memories </p>
 <p-dataScroller [value]="events" [rows]="10">
   <p-header>List of Events</p-header>
   <p-footer>Choose from the list.</p-footer>
@@ -22,5 +20,5 @@
       <hr>
     </div>
   </ng-template>
-  <app-my-event-dialog [displayDialog]="displayDialog" [selectedEvent]="selectedEvent"></app-my-event-dialog>
+  <app-my-event-dialog [displayDialog]="displayDialog" [selectedEvent]="selectedEvent" (onDialogClosed)="closedDialog($event)"></app-my-event-dialog>
 </p-dataScroller>

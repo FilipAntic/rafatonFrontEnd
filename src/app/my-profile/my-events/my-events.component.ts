@@ -25,12 +25,15 @@ export class MyEventsComponent implements OnInit {
 
   selectEvent(event: Event) {
     console.log(event.images[1].url)
-
     this.selectedEvent = event;
     this.displayDialog = true;
     console.log(this.displayDialog)
   }
 
-
+  closedDialog(event) {
+    this.selectedEvent = null;
+    this.displayDialog = false;
+    console.log(this.selectedEvent, this.displayDialog)
+  }
 
 }

@@ -13,24 +13,40 @@ img {
 }
 
 textarea {
-    height: 100px;
+    resize: none;
+    height: 300px;
+    width: 500px;
 }
 
 .container {
-    height: 500px;
-    width: 500px;
-}
-.selected,container{
-  width: 300px;
-  margin: 0 auto;
-  align-self: center;
-  text-align: center;
-  overflow-x: hidden !important;
+    margin: 0 auto;
+    width: 100%;
 }
 
+.selected,
+container {
+    margin: 0 auto;
+    align-self: center;
+    text-align: center;
+    overflow-x: hidden !important;
+    background: rgb(8, 248, 208);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(8, 248, 208), rgba(255, 0, 56, 1));
+    /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgb(8, 248, 208), rgba(255, 0, 56, 1));
+    /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgb(8, 248, 208), rgba(255, 0, 56, 1));
+    /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgb(8, 248, 208), rgba(255, 0, 56, 1));
+    /*Standard*/
+}
 
 .center {
     margin: 0 auto !important;
     text-align: center;
     align-self: center;
+}
+
+.friends {
+    font-size: 20px;
 }

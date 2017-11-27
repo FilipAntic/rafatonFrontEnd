@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
-import { CheckboxModule, DataTableModule, SharedModule, ButtonModule, DataListModule, DataScrollerModule, DialogModule, CarouselModule, GalleriaModule } from 'primeng/primeng';
+import { CheckboxModule, DataTableModule, SharedModule, ButtonModule, DataListModule, DataScrollerModule, DialogModule, CarouselModule, GalleriaModule, InputTextareaModule, ChipsModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -14,7 +14,8 @@ import { AuthService } from './services/auth.service';
 import { MyEventsComponent } from './my-profile/my-events/my-events.component';
 import { EventService } from './my-profile/my-events/event.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/my-event-dialog.component'
+import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/my-event-dialog.component';
+import { HomeComponent } from './home/home.component'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/m
     HeaderComponent,
     MyProfileComponent,
     MyEventsComponent,
-    MyEventDialogComponent
+    MyEventDialogComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +44,9 @@ import { MyEventDialogComponent } from './my-profile/my-events/my-event-dialog/m
     DataScrollerModule,
     DialogModule,
     BrowserAnimationsModule,
-    GalleriaModule
-
+    GalleriaModule,
+    InputTextareaModule,
+    ChipsModule
   ],
   providers: [
     AuthService,

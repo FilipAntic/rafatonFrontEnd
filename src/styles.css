@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
 .background {
     background-image: url('assets/images/bckAll.jpg');
     background-size: 1920px 2890px;
-  background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.ui-dialog.ui-widget .ui-dialog-content {
+    padding: 0 !important;
 }

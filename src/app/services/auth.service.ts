@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 import { Response } from '@angular/http/src/static_response';
 import { User } from '../login/user';
+import { Event } from '../my-profile/my-events/event';
+import { UserEvent } from './UserEvent';
 
 @Injectable()
 export class AuthService {
@@ -10,6 +12,11 @@ export class AuthService {
   data: any;
   isAuthenticated: boolean = false;
   login(username: string, password: string) {
+    let user: User = <User>JSON.parse(localStorage.getItem('user'));
+    let object = {
+      userId: user.id,
+      event: null
+    };
 
     this.http.get('http://localhost:8087/user/login?username=' + username + '&password=' + password).
       subscribe((response: Response) => {
@@ -29,5 +36,21 @@ export class AuthService {
     this.isAuthenticated = false;
     localStorage.setItem('user', null)
     console.log(localStorage.getItem('user'))
+  }
+  setEvents(data: any) {
+    let user: User = <User>JSON.parse(localStorage.getItem('user'));
+    let object: UserEvent = {
+      userId: user.id,
+      event: null
+    };
+
+    console.log(object)
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post("http://localhost:8087/event/saveEvent", object).toPromise()
+      .then(() => {
+
+      })
+      .catch(() => (console.log("A")));
   }
 }

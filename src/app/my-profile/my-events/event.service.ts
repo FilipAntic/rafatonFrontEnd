@@ -3,6 +3,8 @@ import { Http } from '@angular/http';
 import { Event } from './event';
 import { Response } from '@angular/http';
 import { User } from '../../login/user';
+import { UserEvent } from '../../services/UserEvent';
+
 @Injectable()
 export class EventService {
 
@@ -19,7 +21,6 @@ export class EventService {
         let data = response.json()
         this.events = <Event[]>data._embedded.events;
         localStorage.setItem('events', JSON.stringify(this.events))
-        console.log(JSON.stringify(JSON.parse(localStorage.getItem('events'))[0]))
       });
   }
 
