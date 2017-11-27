@@ -1,10 +1,14 @@
 .event-details {
     border: 1px solid gray;
 }
-.ui-grid,ui-grid-responsive,ui-fluid{
- font-size:16px;
-  padding-left: 20px;
-  /*border-bottom:1px solid #D5D5D5;*/
-  margin: 0 auto;
-  cursor: hand;
+
+.ui-grid,
+ui-grid-responsive,
+ui-fluid {
+    font-size: 28px;
+    padding-left: 20px;
+    padding-top: 22px;
+    margin: 0 auto;
+    cursor: hand;
+    /*opacity: 0.6;*/
 }
